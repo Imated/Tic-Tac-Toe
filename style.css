@@ -76,6 +76,84 @@ html {
     justify-content: center;
     z-index: 20;
   }
+
+  .queue-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #faf8ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+  }
+
+  .queue-screen-content {
+    background-color: #faf8ef;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: queueScreenTextAnim 4s ease 0s infinite normal forwards;
+  }
+
+  @keyframes queueScreenTextAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	15% {
+		transform: scale3d(1.2, 0.7, 1);
+	}
+
+	20% {
+		transform: scale3d(0.7, 1.2, 1);
+	}
+
+	25% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	32.5% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	37.5% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	50% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	65% {
+		transform: scale3d(0.7, 1.2, 1);
+	}
+
+	70% {
+		transform: scale3d(1.2, 0.7, 1);
+	}
+
+	75% {
+		transform: scale3d(0.85, 1.15, 1);
+	}
+
+	82.5% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	87.5% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
   
   .mobile-block-screen {
     position: fixed;

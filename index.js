@@ -15,13 +15,15 @@ const winningCombinations = [
 ];
 
 const startScreen = document.querySelector('.start-screen');
-const startSingleplayerButton = startScreen.querySelector('.singleplayer-start-button')
+const queueScreen = document.querySelector('.queue-screen');
+const startSingleplayerButton = startScreen.querySelector('.singleplayer-start-button');
+const startMultiplayerQueueButton = startScreen.querySelector('.multiplayer-start-button');
 const winScreen = document.querySelector('.win-screen');
 const winScreenContent = winScreen.querySelector('.win-screen-content');
 const winText = winScreen.querySelector('.win-text');
 const playAgainButton = winScreen.querySelector('.play-again-button');
 const mainMenuButton = winScreen.querySelector('.main-menu-button');
-const mobileBlockScreen = document.querySelector('.mobile-block-screen')
+const mobileBlockScreen = document.querySelector('.mobile-block-screen');
 const isMobile = navigator.userAgentData.mobile;
 
 if (isMobile){
@@ -71,6 +73,12 @@ function startSingleplayerGame(){
 }
 
 startSingleplayerButton.addEventListener('click', startSingleplayerGame);
+
+function startMultiplayerGameQueue(){
+    queueScreen.style.display = 'flex';
+}
+
+startMultiplayerQueueButton.addEventListener('click', startMultiplayerGameQueue)
 
 function mainMenu(){
   resetGame();
