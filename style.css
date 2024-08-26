@@ -16,8 +16,24 @@ html {
     font-size: 48px;
     margin-bottom: 20px;
     padding: 15px;
+    animation: breathingTitleAnim 5s ease 0s infinite normal forwards;
   }
   
+  @keyframes breathingTitleAnim {
+    0% {
+      transform: translate(0px, 5px);
+
+    }
+  
+    50% {
+      transform: translate(0px, -5px);
+    }
+
+    100% {
+      transform: translate(0px, 5px);
+    }
+  }
+
   .body {
     font-weight: bold;
   }
