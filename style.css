@@ -164,7 +164,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #faf8ef;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,30 +227,30 @@ html {
     width: 150px;
   }
   
-  .start-button {
-    padding: 15px 10px;
-    font-size: 20px;
-    margin-top: 10px;
-    width: 150px;
-  }
+.start-button {
+  padding: 15px 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  width: 150px;
+}
   
-  .button {
-    background-color: #cbbfb4;
-    color: #faf8ef;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    font-family: "Concert One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+.button {
+  background-color: #cbbfb4;
+  color: #faf8ef;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
   
-  .hover-effect:hover {
-    transition: transform 0.15s ease-in-out;
-    transform: scale(1.05);
-  }
+.hover-effect:hover {
+  transition: transform 0.15s ease-in-out;
+  transform: scale(1.05);
+}
   
-  .hover-effect:not(:hover) {
-    transition: transform 0.15s ease-in-out;
-    transform: scale(1);
-  }
+.hover-effect:not(:hover) {
+  transition: transform 0.15s ease-in-out;
+  transform: scale(1);
+}
