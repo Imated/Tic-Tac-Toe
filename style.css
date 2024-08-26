@@ -1,4 +1,4 @@
-html {
+  html {
     height: 100%;
     width: 100%;
     background-color: #faf8ef;
@@ -34,20 +34,7 @@ html {
     }
   }
 
-  .body {
-    font-weight: bold;
-  }
-  
-  .grid-cell {
-    width: 57.5px;
-    height: 57.5px;
-    padding: 20px;
-    border-radius: 10px;
-    background: #cbbfb4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  /* --------- ANIMATIONS --------- */
   
   .scale-in {
     transform: scale(0);
@@ -57,6 +44,27 @@ html {
   .scale-in.active {
     transform: scale(1);
   }
+  
+  .win-screen-content.scale-out {
+    transition: transform 0.25s ease-in-out;
+    transform: scale(0);
+  }
+
+  .win-screen-content.active {
+    transform: scale(1);
+  }
+
+  .hover-effect:hover {
+    transition: transform 0.15s ease-in-out;
+    transform: scale(1.05);
+  }
+    
+  .hover-effect:not(:hover) {
+    transition: transform 0.15s ease-in-out;
+    transform: scale(1);
+  }
+
+  /* --------- GRID --------- */
   
   .grid-container {
     display: grid;
@@ -69,6 +77,45 @@ html {
     justify-items: center;
     padding: 10px;
   }
+
+  .grid-cell {
+    width: 57.5px;
+    height: 57.5px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #cbbfb4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* --------- SCREENS --------- */
+
+  .screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-block-screen {
+    background-color: #faf8ef;
+    z-index: 100;
+  }
+
+  .offline-screen {
+    background-color: #faf8ef;
+    z-index: 99;
+  }
+
+  .start-screen {
+    background-color: #faf8ef;
+    z-index: 20;
+  }
   
   .start-screen-content {
     background-color: #faf8ef;
@@ -79,30 +126,10 @@ html {
     flex-direction: column;
     align-items: center;
   }
-  
-  .start-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #faf8ef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 20;
-  }
 
   .queue-screen {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: #faf8ef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 30;
   }
 
@@ -117,7 +144,7 @@ html {
   }
 
   .queue-screen-text {
-    animation: queueScreenTextAnim 4s ease 0s infinite normal forwards;
+    animation: queueScreenTextAnim 5s ease 0s infinite normal forwards;
   }
 
   @keyframes queueScreenTextAnim {
@@ -172,31 +199,10 @@ html {
 	100% {
 		transform: scale3d(1, 1, 1);
 	}
-}
-  
-  .mobile-block-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #faf8ef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
   }
   
   .win-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 10;
   }
   
@@ -213,19 +219,23 @@ html {
     gap: 15px;
   }
   
-  .win-screen-content.active {
-    transform: scale(1);
-  }
-  
-  .win-screen-content.scale-out {
-    transition: transform 0.25s ease-in-out;
-    transform: scale(0);
-  }
-  
   .win-text {
     font-size: 32px;
     text-align: center;
     color: #cbbfb4;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* --------- BUTTONS --------- */
+
+  .button {
+    background-color: #cbbfb4;
+    color: #faf8ef;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
     font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -243,30 +253,9 @@ html {
     width: 150px;
   }
   
-.start-button {
-  padding: 15px 10px;
-  font-size: 20px;
-  margin-top: 10px;
-  width: 150px;
-}
-  
-.button {
-  background-color: #cbbfb4;
-  color: #faf8ef;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-family: "Concert One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-  
-.hover-effect:hover {
-  transition: transform 0.15s ease-in-out;
-  transform: scale(1.05);
-}
-  
-.hover-effect:not(:hover) {
-  transition: transform 0.15s ease-in-out;
-  transform: scale(1);
-}
+  .start-button {
+    padding: 15px 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 150px;
+  }

@@ -28,22 +28,22 @@
    </div>
 </div>
 
-<div class="start-screen" style="display: flex;">
+<div class="start-screen screen" style="display: flex;">
    <div class="start-screen-content">
       <h1 class="title">Tic-Tac-Toe</h1>
-      <button class="button start-button singleplayer-start-button hover-effect">Singleplayer</button>
-      <button class="button start-button multiplayer-start-button hover-effect">Multiplayer</button>
+      <button class="button start-button hover-effect singleplayer-start-button">Singleplayer</button>
+      <button class="button start-button hover-effect multiplayer-start-button">Multiplayer</button>
    </div>
 </div>
 
-<div class="queue-screen" style="display: none;">
+<div class="queue-screen screen" style="display: none;">
     <div class="queue-screen-content">
         <h1 class="title queue-screen-text">Waiting for opponent...</h1>
         <button class="main-menu-button hover-effect button">Menu</button>
     </div>
 </div>
 
-<div class="win-screen" style="display: none;">
+<div class="win-screen screen" style="display: none;">
    <div class="win-screen-content">
       <h2 class="win-text"></h2>
       <button class="play-again-button hover-effect button">Play Again</button>
@@ -51,12 +51,16 @@
    </div>
 </div>
 
-<div class="mobile-block-screen" style="display: none;">
+<div class="offline-screen screen" style="display: none;">
+   <h1 class="title">Sorry, since you are offline, multiplayer services are not available to you.</h1>
+</div>
+
+<div class="mobile-block-screen screen" style="display: none;">
    <h1 class="title">Sorry, mobile users cannot access this website.</h1>
 </div>
 
 <body class="body">
-   <script src="index.js" />
+   <script src="index.js"></script>
 </body>
 
 </html>

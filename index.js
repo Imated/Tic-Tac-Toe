@@ -25,11 +25,54 @@ const playAgainButton = winScreen.querySelector('.play-again-button');
 const mainMenuButton = winScreen.querySelector('.main-menu-button');
 const queueMainMenuButton = queueScreen.querySelector('.main-menu-button');
 const mobileBlockScreen = document.querySelector('.mobile-block-screen');
-const isMobile = navigator.userAgentData.mobile;
+const offlineScreen = document.querySelector('.offline-screen')
+let isMobile = navigator.userAgentData.mobile;
+let isOffline = !window.navigator.onLine;
 
-if (isMobile){
-  mobileBlockScreen.style.display = 'flex';
+let currentScreen = 'start';
+
+/* --------- SCREENS/WARNINGS --------- */
+
+function detectAndShowWarnings() {
+  isMobile = navigator.userAgentData.mobile;
+  isOffline = !window.navigator.onLine;
+
+  if (isMobile) {
+    mobileBlockScreen.style.display = 'flex';
+  }
+  
+  if(isOffline && currentScreen === 'queue') {
+    offlineScreen.style.display = 'flex';
+  }
 }
+
+/* --------- BUTTONS --------- */
+
+function showWinScreen() {
+  winScreen.style.display = 'flex';
+  setTimeout(() => {
+    winScreenContent.classList.add('active');
+  }, 10);
+}
+
+function mainMenu(){
+  resetGame();
+  queueScreen.style.display = 'none';
+  startScreen.style.display = 'flex';
+  screen = 'start';
+}
+
+function startSingleplayerGame() {
+  startScreen.style.display = 'none';
+  screen = 'game';
+}
+
+function startMultiplayerGameQueue() {
+  queueScreen.style.display = 'flex';
+  screen = 'queue';
+}
+
+/* --------- GAME FUNCTIONALITY --------- */
 
 function checkWin() {
   for (let i = 0; i < winningCombinations.length; i++) {
@@ -60,35 +103,16 @@ function resetGame() {
   winScreenContent.classList.remove('active');
 }
 
-function showWinScreen() {
-  winScreen.style.display = 'flex';
-  setTimeout(() => {
-    winScreenContent.classList.add('active');
-  }, 10);
-}
+detectAndShowWarnings();
 
 playAgainButton.addEventListener('click', resetGame);
-
-function startSingleplayerGame(){
-  startScreen.style.display = 'none';
-}
-
 startSingleplayerButton.addEventListener('click', startSingleplayerGame);
-
-function startMultiplayerGameQueue(){
-    queueScreen.style.display = 'flex';
-}
-
 startMultiplayerQueueButton.addEventListener('click', startMultiplayerGameQueue)
-
-function mainMenu(){
-  resetGame();
-  queueScreen.style.display = 'none';
-  startScreen.style.display = 'flex';
-}
-
 mainMenuButton.addEventListener('click', mainMenu);
 queueMainMenuButton.addEventListener('click', mainMenu);
+
+window.addEventListener('online', detectAndShowWarnings);
+window.addEventListener('offline', detectAndShowWarnings);
 
 gridCells.forEach((cell, index) => {
   cell.addEventListener('click', () => {
