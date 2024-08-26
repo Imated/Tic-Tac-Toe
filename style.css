@@ -1,0 +1,175 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: #faf8ef;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .title {
+    text-align: center;
+    color: #cbbfb4;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  .body {
+    font-weight: bold;
+  }
+  
+  .grid-cell {
+    width: 57.5px;
+    height: 57.5px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #cbbfb4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scale-in {
+    transform: scale(0);
+    transition: transform 0.15s ease-in-out;
+  }
+  
+  .scale-in.active {
+    transform: scale(1);
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    border-radius: 10px;
+    background: #dad1c8;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+  }
+  
+  .start-screen-content {
+    background-color: #faf8ef;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #faf8ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+  }
+  
+  .mobile-block-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  
+  .win-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  
+  .win-screen-content {
+    background-color: #faf8ef;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.15s ease-in-out;
+    transform: scale(0);
+    gap: 15px;
+  }
+  
+  .win-screen-content.active {
+    transform: scale(1);
+  }
+  
+  .win-screen-content.scale-out {
+    transition: transform 0.25s ease-in-out;
+    transform: scale(0);
+  }
+  
+  .win-text {
+    font-size: 32px;
+    text-align: center;
+    color: #cbbfb4;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .play-again-button {
+    padding: 20px 20px;
+    font-size: 24px;
+    width: 150px;
+  }
+  
+  .main-menu-button {
+    padding: 20px 20px;
+    font-size: 24px;
+    width: 150px;
+  }
+  
+  .start-button {
+    padding: 15px 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 150px;
+  }
+  
+  .button {
+    background-color: #cbbfb4;
+    color: #faf8ef;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .hover-effect:hover {
+    transition: transform 0.15s ease-in-out;
+    transform: scale(1.05);
+  }
+  
+  .hover-effect:not(:hover) {
+    transition: transform 0.15s ease-in-out;
+    transform: scale(1);
+  }

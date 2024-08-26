@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>replit</title>
+   <link href="style.css" rel="stylesheet" type="text/css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet" />
+</head>
+
+<div class="mobile-block-screen" style="display: none;">
+   <h1 class="title">Sorry, mobile users cannot access this website.</h1>
+</div>
+   
+<div class="game">
+   <h1 class="title">Tic-Tac-Toe</h1>
+   <div class="grid-container">
+      <div class="grid-cell hover-effect"></div>
+      <div class="grid-cell hover-effect"></div>
+      <div class="grid-cell hover-effect"></div>
+
+      <div class="grid-cell hover-effect"></div>
+      <div class="grid-cell hover-effect"></div>
+      <div class="grid-cell hover-effect"></div>
+
+      <div class="grid-cell hover-effect"></div>
+      <div class="grid-cell hover-effect"></div>
+      <div class="grid-cell hover-effect"></div>
+   </div>
+</div>
+
+<div class="start-screen" style="display: flex;">
+   <div class="start-screen-content">
+      <h1 class="title">Tic-Tac-Toe</h1>
+      <button class="button start-button singleplayer-start-button hover-effect">Singleplayer</button>
+      <button class="button start-button multiplayer-start-button hover-effect">Multiplayer</button>
+   </div>
+</div>
+
+<div class="win-screen" style="display: none;">
+   <div class="win-screen-content">
+      <h2 class="win-text"></h2>
+      <button class="play-again-button hover-effect button">Play Again</button>
+      <button class="main-menu-button hover-effect button">Menu</button>
+   </div>
+</div>
+
+<body class="body">
+   <script src="index.js" />
+</body>
+
+</html>
