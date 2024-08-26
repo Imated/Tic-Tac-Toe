@@ -98,6 +98,9 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .queue-screen-text {
     animation: queueScreenTextAnim 4s ease 0s infinite normal forwards;
   }
 

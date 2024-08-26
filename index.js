@@ -23,6 +23,7 @@ const winScreenContent = winScreen.querySelector('.win-screen-content');
 const winText = winScreen.querySelector('.win-text');
 const playAgainButton = winScreen.querySelector('.play-again-button');
 const mainMenuButton = winScreen.querySelector('.main-menu-button');
+const queueMainMenuButton = queueScreen.querySelector('.main-menu-button');
 const mobileBlockScreen = document.querySelector('.mobile-block-screen');
 const isMobile = navigator.userAgentData.mobile;
 
@@ -82,10 +83,12 @@ startMultiplayerQueueButton.addEventListener('click', startMultiplayerGameQueue)
 
 function mainMenu(){
   resetGame();
+  queueScreen.style.display = 'none';
   startScreen.style.display = 'flex';
 }
 
 mainMenuButton.addEventListener('click', mainMenu);
+queueMainMenuButton.addEventListener('click', mainMenu);
 
 gridCells.forEach((cell, index) => {
   cell.addEventListener('click', () => {
